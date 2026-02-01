@@ -50,3 +50,36 @@ The build uses Python 3.x (latest stable version).
 ## Node.js Version
 
 The `.node-version` file specifies Node.js 18 for compatibility with Cloudflare Pages.
+
+## Custom Domain Configuration
+
+This site is configured to use the custom domain: **internalallthethings.wiki.n0o0b.com**
+
+### Setting up Custom Domain in Cloudflare Pages
+
+1. Go to your Cloudflare Pages project in the dashboard
+2. Navigate to the "Custom domains" tab
+3. Click "Set up a custom domain"
+4. Enter your domain: `internalallthethings.wiki.n0o0b.com`
+5. Cloudflare will automatically configure the DNS records
+
+### DNS Configuration
+
+If you're managing DNS yourself or using a subdomain from a different zone:
+
+- **Type**: CNAME
+- **Name**: `internalallthethings.wiki` (or your subdomain)
+- **Target**: Your Cloudflare Pages URL (e.g., `internal-all-the-things.pages.dev`)
+- **Proxy status**: Proxied (orange cloud) ✅
+
+### Troubleshooting 404 Errors
+
+If you encounter 404 errors after binding a custom domain:
+
+1. **Verify DNS propagation**: Use tools like `dig` or online DNS checkers to ensure your domain points to Cloudflare
+2. **Check deployment status**: Ensure the latest build deployed successfully
+3. **Clear cache**: Clear your browser cache or try in incognito mode
+4. **Wait for propagation**: DNS changes can take up to 24 hours to propagate globally
+5. **Verify site_url**: The `mkdocs.yml` file should have `site_url: https://internalallthethings.wiki.n0o0b.com`
+
+The site configuration has been updated to work correctly with the custom domain.
