@@ -1,8 +1,8 @@
 site_name: Internal All The Things
 site_description: 'Active Directory and Internal Pentest Cheatsheets'
-site_url: https://swisskyrepo.github.io/InternalAllTheThings
+site_url: https://internalallthethings.wiki.n0o0b.com
 
-repo_url: https://github.com/swisskyrepo/InternalAllTheThings
+repo_url: https://github.com/n00o00b/InternalAllTheThings
 edit_uri: blob/main/docs/
 
 theme:
@@ -60,4 +60,3 @@ markdown_extensions:
 plugins:
   - search
   - git-revision-date-localized
-  - social
